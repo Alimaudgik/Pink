@@ -1,0 +1,137 @@
+@pink: #d22856;
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2"), format("woff2");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+
+  src: url("../fonts/OpenSans-RegularItalic.woff") format("woff"), url("../fonts/OpenSans-RegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+
+  src: url("../fonts/OpenSans-BoldItalic.woff") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
+}
+
+
+
+
+body {
+  background-color: #1d2631;
+
+  margin: 0 auto;
+  padding: 0;
+
+  width: 320px;
+
+  font-family: "OpenSans", Arial, Helvetica, sans-serif;
+
+  border: 2px solid lightgreen;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+.main-nav__logo svg {
+  width: 75px;
+  height: 22px;
+
+  &:hover * {
+    fill: @pink;
+  }
+}
+
+.main-nav__logo:active svg * {
+  fill: #ffffff;
+  opacity: 0.3
+}
+
+.tablet-logo,
+.desktop-logo {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+
+  body {
+    background-color: #1d2631;
+  
+    width: 768px;
+  }
+
+  .main-nav__logo svg {
+    width: 147px;
+    height: 40px;
+  }
+
+  .mobile-logo,
+  .desktop-logo {
+    display: none;
+  }
+
+  .tablet-logo {
+    display: inline-block
+  }
+}
+
+
+@media (min-width: 1250px) {
+  body {
+    width: 1250px;
+  }
+
+  .main-nav__logo:active svg .st1 {
+    fill: @pink;
+    opacity: 0.3;
+  }
+
+  .mobile-logo,
+  .tablet-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: inline-block
+  }
+  
+}
