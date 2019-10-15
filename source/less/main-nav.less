@@ -3,6 +3,13 @@
 @pink: #d22856;
 
 
+.page__header {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+}
 
 .main-nav {
   position: relative;
@@ -10,6 +17,10 @@
   margin: 0;
   padding: 0;
 
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.open-menu {
   background-color: @darkblue;
 }
 
@@ -50,16 +61,20 @@
   display: none;
 }
 
-.main-nav__button {
+.main-nav__button,
+.close-icon {
   position: absolute;
 
   right: 20px;
   top: 22px;
+}
+
+.main-nav__button {
+  display: block;
 
   width: 50px;
   height: 4px;
   
-
   border: none;
   background-color: #ffffff;
   font-size: 0;
@@ -67,6 +82,36 @@
   box-shadow:
     0 10px 0 0 #ffffff,
     0 20px 0 0 #ffffff;
+}
+
+.close-icon {
+  display: none;
+  
+  width: 30px;
+  height: 30px;
+  border: @dashed;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-nav__list-wrapper {
@@ -105,15 +150,44 @@
 
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid #000000;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: #ffffff;
+    opacity: 0.3;
+  }
 }
 
 
-@media(min-width: 768px) {
+
+
+@media(min-width: 660px) {
 
   .main-nav__logo-wrapper {
     width: 147px;
     height: 40px;
+
+    padding-top: 27px;
+    padding-bottom: 44px;
   }
+
+  /*
+  .main-nav__logo-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 25px;
+
+  width: 75px;
+  height: 22px;
+
+  border: @dashed;
+}
+  */
 
   .tablet-logo {
     display: block;
@@ -124,20 +198,34 @@
     display: none;
   }
 
+  .main-nav__button,
+  .close-icon {
+    top: 44px;
+  }
+
 }
 
 
 
-@media(min-width: 1250px) {
+@media(min-width: 1200px) {
+
+  .main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding: 0 130px;
+  }
 
   .main-nav__logo-wrapper {
     width: 147px;
     height: 40px;
 
-    margin-left: 130px;
+    margin: 0;
   }
 
-  .main-nav__button {
+  .main-nav__button, 
+  .close-icon {
     display: none;
   }
 
@@ -151,11 +239,32 @@
   }
 
   .main-nav__list-wrapper {
-    display: block;
+    display: flex;
   }
 
   .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 620px;
+
+    border: none;
+
     font-weight: normal;
     text-transform: initial;
+  }
+
+  .main-nav__item {
+    border: @dashed;
+
+    width: auto;
+  }
+
+  .main-nav__link {
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+    height: 100%;
   }
 }
