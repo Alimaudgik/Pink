@@ -1,9 +1,11 @@
 @dashed: 1px dashed red;
 @darkblue: #283645;
+@lightblue: #1d2631;
 @pink: #d22856;
 
 
 .main-page__preview {
+  background-color: @lightblue;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -11,6 +13,8 @@
 }
 
 .preview__wrapper {
+  position: relative;
+
   display: flex;
   flex-flow: column nowrap;
 
@@ -41,6 +45,76 @@
   height: 314px;
 }
 
+.preview__info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 30px;
+
+  width: 280px;
+
+  border: @dashed;
+}
+
+.preview__tittle {
+  border: @dashed;
+
+  display: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.preview__button {
+  margin-bottom: 30px;
+}
+
+.preview__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 35px;
+  margin-bottom: 25px;
+
+  border: @dashed;
+}
+
+.preview__item {
+  border: @dashed;
+}
+
+.apple-logo {
+  width: 47px;
+  height: 56px;
+}
+
+.android-logo {
+  width: 43px;
+  height: 47px;
+}
+
+.microsoft-logo {
+  width: 44px;
+  height: 41px;
+}
+
+.preview__text {
+  margin: 0;
+  padding: 0 20px;
+  margin-bottom: 25px;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: normal;
+  color: #ffffff;
+}
+
 
 @media(min-width: 660px) {
 
@@ -59,6 +133,28 @@
   
     width: 660px;
     height: 545px;
+  }
+
+  .preview__info {
+    width: 300px;
+
+    padding: 0;
+  }
+
+  .preview__button {
+    margin-bottom: 45px;
+  }
+
+  .preview__list {
+    margin-bottom: 35px;
+    padding: 0 45px;
+  }
+
+  .preview__text {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+
   }
 
 
@@ -83,6 +179,14 @@
   
     width: 1050px;
     height: 645px;
+  }
+
+  .preview__button {
+    margin-bottom: 65px;
+  }
+
+  .preview__list {
+    margin-bottom: 55px;
   }
 
 }
