@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
-    <header class="page__header">
+    <header class="page__header close-menu">
       <nav class="main-nav">
         <button type="button" class="main-nav__button">Октрыть</button>
         <div class="main-nav__logo-wrapper">
@@ -131,13 +131,13 @@
             </li>
           </ul>
         </div>
-        <span class="close-icon"></span>
+        <span class="close-icon close-off"></span>
       </nav>
     </header>
     
     <main class="page__main-page container">
 
-      <section class="main-page__preview">
+      <section class="main-page__preview closed-menu">
         <div class="preview__wrapper">
           <p class="preview__image--block">
             <picture>
@@ -495,5 +495,8 @@
       </div>
 
     </footer>
+
+    <script src="js/main-nav.js"></script>
+
   </body>
 </html>

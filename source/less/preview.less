@@ -25,8 +25,7 @@
 
 .preview__image--block {
   position: relative;
-
-  border: @dashed;
+  
   margin: 0;
   padding: 0;
 
@@ -54,13 +53,11 @@
   padding-top: 30px;
 
   width: 280px;
-
-  border: @dashed;
+  
 }
 
 .preview__tittle {
-  border: @dashed;
-
+  
   display: none;
 
   margin: 0;
@@ -80,13 +77,9 @@
   margin: 0;
   padding: 0 35px;
   margin-bottom: 25px;
-
-  border: @dashed;
 }
 
-.preview__item {
-  border: @dashed;
-}
+
 
 .apple-logo {
   width: 47px;
@@ -115,6 +108,10 @@
   color: #ffffff;
 }
 
+.opened-menu {
+  margin-top: -65px;
+}
+
 
 @media(min-width: 660px) {
 
@@ -136,9 +133,24 @@
   }
 
   .preview__info {
+    position: absolute;
+    left: 20px;
+    bottom: 110px;
     width: 300px;
 
     padding: 0;
+  }
+
+  .preview__tittle {  
+    display: flex;
+
+    padding: 0 50px;
+    margin-bottom: 35px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
   }
 
   .preview__button {
@@ -154,19 +166,26 @@
     margin: 0;
     padding: 0;
     font-size: 17px;
-
   }
 
-
+  .opened-menu {
+    margin-top: -110px;
+  }
 }
 
 
 
-@media(min-width: 1250px) {
+@media(min-width: 1200px) {
   .main-page__preview {
     background-image: url("../img/back-desktop.jpg");
     background-position-x: 100%;
     background-size: 2560px 853px;
+  }
+
+  .preview__info {
+    left: 130px;
+    bottom: 120px;
+    width: 300px;
   }
 
   .preview__image--block {
@@ -189,4 +208,7 @@
     margin-bottom: 55px;
   }
 
+  .opened-menu {
+    margin: 0;
+  }
 }
