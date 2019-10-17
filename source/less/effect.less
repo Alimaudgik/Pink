@@ -4,9 +4,13 @@
 @pink: #d22856;
 @lightgrey: #f2f2f2;
 
+
+
 .main-page__effect {
   display: none;
 }
+
+
 
 @media(min-width: 660px) {
   .main-page__effect {
@@ -16,7 +20,7 @@
     margin: 0;
     padding: 60px 20px 50px;
 
-    background-color: pink;
+    background-color: #ffffff;
   }
 
 
@@ -39,9 +43,7 @@
 
     width: 238px;
     height: 276px;
-
-    border: @dashed;
-
+    
     & p {
       margin: 0;
       padding: 0;
@@ -80,9 +82,7 @@
     font-weight: bold;
     color: @pink;
     line-height: 202px;
-
-    border: @dashed;
-
+    
     width: 202px;
   }
    
@@ -91,8 +91,8 @@
   .effect__text-block {
     margin: 0;
     padding: 0;
+    padding-top: 40px;
     width: 310px;
-
   }
 
   .effect__title {
@@ -114,6 +114,10 @@
     font-size: 14px;
     line-height: 24px;
     color: @darkblue;
+
+    & br {
+      display: none;
+    }
   }
 
   .effect__link {
@@ -137,6 +141,62 @@
 
 
 @media(min-width: 1200px) {
+  .main-page__effect {
+    padding: 25px 130px 65px;
 
+    background-color: @lightgrey;
+  }
+
+  
+  .effect__logo {
+    width: 298px;
+    height: 345px;
+  }
+
+  .logo-2,
+  .logo-number {
+    left: 22px;
+    bottom: 23px;
+    
+    width: 253px;
+    height: 253px;
+  }
+
+  .logo-number {
+    font-size: 120px;
+    line-height: 253px;
+  }
+
+
+  
+  .effect__text-block {
+    padding-top: 95px;
+    width: 530px;
+  }
+
+  .effect__title {
+    margin-bottom: 25px;
+    width: 100%;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .effect__text {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .effect__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
 
 }
