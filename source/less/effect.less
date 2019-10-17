@@ -1,0 +1,142 @@
+@dashed: 1px dashed red;
+@darkblue: #283645;
+@lightblue: #1d2631;
+@pink: #d22856;
+@lightgrey: #f2f2f2;
+
+.main-page__effect {
+  display: none;
+}
+
+@media(min-width: 660px) {
+  .main-page__effect {
+    position: relative;
+
+    display: flex;
+    margin: 0;
+    padding: 60px 20px 50px;
+
+    background-color: pink;
+  }
+
+
+  .effect__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .effect__logo {
+    position: relative;
+    
+    margin: 0;
+    padding: 0;
+    margin-right: 70px;
+
+    width: 238px;
+    height: 276px;
+
+    border: @dashed;
+
+    & p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .logo-1 svg path {
+    fill: #dedede
+  }
+
+  .logo-2 {
+    position: absolute;
+    left: 18px;
+    bottom: 19px;
+    
+    margin: 0;
+    padding: 0;
+    
+    width: 202px;
+    height: 202px;
+    z-index: 90;
+
+    & svg path {
+      fill: @pink;
+      stroke: none;
+    }
+  }
+
+  .logo-number {
+    position: absolute;
+    left: 18px;
+    bottom: 19px;
+    
+    text-align: center;
+    font-size: 96px;
+    font-weight: bold;
+    color: @pink;
+    line-height: 202px;
+
+    border: @dashed;
+
+    width: 202px;
+  }
+   
+
+
+  .effect__text-block {
+    margin: 0;
+    padding: 0;
+    width: 310px;
+
+  }
+
+  .effect__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    width: 170px;
+  }
+
+  .effect__text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: @darkblue;
+  }
+
+  .effect__link {
+    color: @pink;
+    font-size: 14px;
+    line-height: 24px;
+
+    border-bottom: 1px solid @pink;
+
+    &:hover {
+      color: @darkblue;
+      border-color: @darkblue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+
+
+@media(min-width: 1200px) {
+
+
+}
