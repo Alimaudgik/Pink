@@ -1,0 +1,225 @@
+@dashed: 1px dashed red;
+@darkblue: #283645;
+@lightblue: #1d2631;
+@pink: #d22856;
+@lightgrey: #f2f2f2;
+
+
+.main-page__review {
+  position: relative;
+  padding: 50px 20px 40px;
+
+  background-color: #ffffff;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+
+    border-left: 320px solid #ffffff;
+    border-bottom: 25px solid transparent ;
+  } 
+}
+
+.review__wrapper {
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.review__quote {
+  display: none;
+}
+
+
+
+.review__author {
+  margin: 0;
+  padding: 0;
+
+  order: 0;
+}
+
+.review__text {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  
+  order: 2;
+
+  & .review__text--check {
+    display: none;
+  }
+}
+
+.review__text--text,
+.review__author--name,
+.review__author--data {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+  color: @darkblue;
+}
+
+.review__author--name {
+  color: #000000;
+
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review__author--data {
+  display: none;
+}
+
+
+.review__check {
+  margin: 0 auto;
+  padding: 0;
+
+  order: 4;
+
+  border: @dashed;
+}
+
+.review__check--list {
+  margin: 0;
+  padding: 0;
+  width: 66px;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.review__checkitem {
+  position: relative;
+  border: @dashed;
+
+  width: 12px;
+  height: 12px;
+
+  & label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    background-color: #bec2c7;
+  }
+
+  & input {
+    display: none;
+  }
+
+  & input:checked + label {
+    left: 0;
+    top: 0;
+
+    border: 3px solid #000000;
+    background-color: transparent;
+  }
+}
+
+
+
+
+
+
+
+
+@media(min-width: 660px) {
+  
+  .main-page__review {
+    padding-bottom: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+
+      border-left-width: 660px;
+      border-bottom-width: 50px;
+    } 
+  }
+
+
+
+  .review__author {
+    order: 3;
+
+    margin-bottom: 10px;
+  }
+
+  .review__text {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+  }
+
+  .review__author {
+    margin-bottom: 30px;
+  }
+
+  .review__author--name {
+    font-size: 20px;
+
+    margin-bottom: 0;
+  }
+
+  .review__author--data {
+    display: block;
+    font-size: 14px;
+  }
+
+}
+
+
+
+@media(min-width: 1200px) {
+
+  .main-page__review {
+    padding: 70px 130px 45px;
+
+    &::after {
+        bottom: -80px;
+
+      border-left-width: 1200px;
+      border-bottom-width: 80px;
+    } 
+  }
+
+  .review__quote {
+    margin: 0 auto 50px;
+    padding: 0;
+
+    width: 79px;
+    height: 63px;
+
+    & svg path {
+      fill: @lightgrey;
+      stroke: none;
+    }
+  }
+
+}

@@ -248,7 +248,7 @@
 
       <section class="main-page__review">
         <div class="review__wrapper">
-          <p>
+          <p class="review__quote">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 78.67 63.79" style="enable-background:new 0 0 78.67 63.79;" xml:space="preserve">
             <g>
@@ -262,18 +262,31 @@
             </svg>
           </p>
 
-          <p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+          <div class="review__text">
+            <button class="review__text--check back">Назад</button>
+            <p class="review__text--text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+            <button class="review__text--check forward">Вперед</button>
+          </div>
+
 
           <div class="review__author">
             <h3 class="review__author--name">Николай Петров</h3>
             <p class="review__author--data">25 лет, водитель трамвая</p>
           </div>
 
-          <ul class="review__checklist">
-            <li class="review__checkitem current"></li>
-            <li class="review__checkitem"></li>
-            <li class="review__checkitem"></li>
-          </ul>
+          <form action="" class="review__check">
+            <ul class="review__check--list">
+              <li class="review__checkitem current">
+                <input id="review-1" type="radio" name="rev" value="rev-1" checked><label for="review-1"></label>
+              </li>
+              <li class="review__checkitem">
+                <input id="review-2" type="radio" name="rev" value="rev-2"><label for="review-2"></label>
+              </li>
+              <li class="review__checkitem">
+                <input id="review-3" type="radio" name="rev" value="rev-3"><label for="review-3"></label>
+              </li>
+            </ul>
+          </form>
 
         </div>
       </section>
