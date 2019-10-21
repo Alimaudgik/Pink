@@ -1,4 +1,5 @@
 @pink: #d22856;
+@dashed: 1px dashed red;
 
 @font-face {
   font-family: "OpenSans";
@@ -98,7 +99,60 @@ ul {
     
     color: rgba(2210, 40, 86, 0.3)
   }
+}
 
+
+.form__slider {
+  margin: 0 auto;
+  padding: 0;
+
+  order: 4;
+}
+
+.form__slider--list {
+  margin: 0;
+  padding: 0;
+  width: 66px;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.form__slider--item {
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+
+  & label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  & input {
+    display: none;
+  }
+
+  & input:checked + label {
+    left: 0;
+    top: 0;
+
+    border: 3px solid #000000;
+    background-color: transparent;
+  }
 }
 
 
