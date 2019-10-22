@@ -21,24 +21,197 @@
 
 .price__table {
   position: relative;
-  left: -260px;
+  left: -258px;
 
   width: 840px;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
 
   border-collapse: collapse;
+
+  & tr td {
+  margin: 0;
+  padding: 15px;
+  }
 }
 
 .price__table tr td:first-child {
   display: none;
 }
 
-.price__thead td {
+.price_thead--data {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
   background-color: @darkblue;
 
-  width: 280px;
+  width: 246px;
 
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+}
+
+
+.price_thead--title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price_thead--cost {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+
+.price__thead {
+  & td:last-child {
+    border-radius: 2px;
+    border-right: 2px solid #e5e5e5;
+  }
+
+  & td:first-child {
+    border-radius: 2px;
+    border-left: 2px solid #e5e5e5;
+  }
+
+  & .hit::before {
+    content: '';
+    position: absolute;
+  
+    left: -1px;
+    top: 0;
+  
+    width: 73px;
+    height: 73px;
+  
+    background-image: linear-gradient(135deg, transparent 20px, @pink 20px, @pink 50px, transparent 50px);
+  }
+
+  & .hit::after {
+    content: 'Хит';
+    
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    transform: rotate(-45deg);
+  }
+}
+
+
+.price_tbody--row td {
+  
+  position: relative;
+  
+  line-height: 30px;
+
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+
+.price_tbody--row:first-child td {
+  border-top: none;
+}
+
+.price_tbody--row .current::before {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.price_tbody--row .name-base::before {
+  content: 'Розовый фильтр';
+}
+
+.price_tbody--row .name-standart::before {
+  content: 'Стандарт';
+}
+
+.price_tbody--row .name-unlim::before {
+  content: 'Анлим';
+}
+/*
+.price_tbody--row .yes::after,
+.price_tbody--row .no::after {
+  content: '';
+  position: absolute;
+
+  right: 15px;
+  top: 15px;
+
+  width: 30px;
+  height: 30px;
+
+  border: @dashed;
+}*/
+
+
+.price_tbody--row span {
+  display: block;
+  position: relative;
+  margin: 0;
+  margin-left: auto;
+
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.price_tbody--row .yes::before {
+  width: 28px;
+  height: 15px;
+  
+  border-left: 3px solid #3dc644;
+  border-bottom: 3px solid #3dc644;
+
+  transform: rotate(-45deg)
+}
+
+.price_tbody--row .no::before,
+.price_tbody--row .no::after {
+  content: '';
+  
+  position: absolute;
+  right: calc(50% - 1.5px);
+  
+  width: 3px;
+  height: 100%;
+  background-color: #f25b26;
+}
+
+.price_tbody--row .no::before {
+  transform: rotate(45deg);
+}
+
+.price_tbody--row .no::after {
+  transform: rotate(-45deg);
 }
 
 .table__check {
@@ -47,6 +220,43 @@
 
 
 @media(min-width: 660px) {
+
+  .main-page__price {
+   padding-bottom: 70px;
+  }
+
+  .price__wrapper {
+    padding: 0 20px;
+  }
+
+  .price__table {
+    left: auto;
+
+    width: 620px;
+  }
+
+  .price__table tr td:first-child {
+    display: table-cell;
+  }
+
+  .price__table tr td {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .price_thead--row .empty-cell {
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+  }
+
+  .price_thead--data {
+    width: 122px;
+  }
+
+
+
+
 
   .table__check {
     display: none;
