@@ -50,6 +50,7 @@
 
   border-left: 2px solid #e5e5e5;
   border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid @darkblue;
 }
 
 
@@ -72,15 +73,20 @@
 }
 
 
+
 .price__thead {
   & td:last-child {
-    border-radius: 2px;
     border-right: 2px solid #e5e5e5;
+
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
 
-  & td:first-child {
-    border-radius: 2px;
-    border-left: 2px solid #e5e5e5;
+  & td:nth-child(2) {
+    border-right: 2px solid #e5e5e5;
+
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
   }
 
   & .hit::before {
@@ -233,6 +239,7 @@
     left: auto;
 
     width: 620px;
+    margin: 0;
   }
 
   .price__table tr td:first-child {
@@ -248,26 +255,67 @@
     border: none;
     background-color: transparent;
     font-size: 0;
+    border-bottom: 2px solid #e5e5e5;
   }
 
   .price_thead--data {
     width: 122px;
   }
 
+  .price_thead--title {
+    font-size: 16px;
+  }
+  
+  .price_thead--cost {
+    font-size: 18px;
+  }
 
+  .price_tbody--row .current::before {
+    display: none;
+  }
 
-
+  .price_tbody--row span {
+    margin: 0 auto;
+  }
 
   .table__check {
     display: none;
   }
-
 }
 
 
 
 @media(min-width: 1200px) {
+  .main-page__price {
+    margin: 0;
+    padding: 150px 0 95px;
+  }
+ 
+  .price__wrapper {
+    padding: 0 130px;
+  }
 
+  .price__table {
+    width: 940px;
+  }
+
+  .price__table tr td,
+  .price_thead--title {
+    font-size: 18px;
+  }
+  
+  .price_thead--cost {
+    font-size: 24px;
+  }
+
+  .price_thead--data {
+    width: 233px;
+  }
+
+
+
+  
+  
 
 }
 
