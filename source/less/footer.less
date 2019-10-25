@@ -21,6 +21,19 @@
   height: 40px;
 }
 
+.footer__logo--index:hover svg .st0 {
+  fill: @pink;
+}
+
+.footer__logo--index:active svg .st0 {
+  fill: @darkblue;
+}
+
+.footer__logo--index:active svg * {
+  opacity: 0.3;
+}
+
+
 .footer__logo--desktop {
   display: none;
 }
@@ -113,6 +126,14 @@
   align-items: center;
   
   width: 100%;
+
+  &:hover svg {
+    fill: #000000;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .footer__link--text,
@@ -133,8 +154,8 @@
 
   & svg {
     width: 27px;
-    height: 34px;
-    border: @dashed;      
+    height: 34px;   
+    fill: @pink; 
   }
 }
 
@@ -183,8 +204,6 @@
 
   .footer__logo--desktop {
     display: flex;
-
-
   }
 
 }

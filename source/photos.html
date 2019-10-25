@@ -11,7 +11,7 @@
     <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page">
+  <body class="photo-page">
     <header class="page__header close-menu">
       <nav class="main-nav">
         <button type="button" class="main-nav__button">Октрыть</button>
@@ -135,247 +135,53 @@
       </nav>
     </header>
     
-    <main class="page__main-page container">
+    <main class="page-inside container">
 
       <section class="main-page__preview closed-menu">
-        <div class="preview__wrapper">
-          <p class="preview__image--block">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/iphone-desktop.png" sizes="100vw">
-              <source media="(min-width: 660px)" srcset="img/iphone-tablet.png" sizes="100vw">
-              <img class="preview__image--logo" src="img/iphone-mobile.png" width="498" height="314" alt="iphone-in-hand">
-            </picture>
-          </p>
-          <div class="preview__info">
-            <h1 class="preview__tittle">Взгляните на жизнь иначе!</h1>
-            <button type="button" class="preview__button button">Скачать приложение</button>
-            <ul class="preview__list">
-              <li class="preview__item apple-logo">
-                <img class="apple-logo" src="img/apple-logo.png" alt="apple-logo" width="47" height="56">
-              </li>
-              <li class="preview__item android-logo">
-                <img class="android-logo" src="img/android-logo.png" alt="android-logo" width="43" height="47">                
-              </li>
-              <li class="preview__item win-logo">
-                <img class="microsoft-logo" src="img/microsoft-logo.png" alt="microsoft-logo" width="44" height="41">
-              </li>
-            </ul>
-            <p class="preview__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-
-          </div>
-
-          </div>
-
+        <div class="preview__wrapper preview__image--block">
+          <h1 class="preview__tittle--inside">Фотографии пользователей</h1>
         </div>
       </section>
 
-      <section class="main-page__offer">
-        <div class="offer__wrapper">
-          <h2 class="offer__title">Устали от серости мегаполиса? <span>Нам есть, что вам предложить!</span></h2>
-          <div class="offer__block">
-            <ul class="offer__list">
-              <li class="offer__item">
-                <p class="offer__item--image">
-                  <img class="iphone__image" src="img/iphone-1-grey.png" width="186" height="382" alt="iphone">
-                </p>
-                <h3 class="offer__item--title">Поднимает настроение</h3>
-                <p class="offer__item--text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              </li>
-              <li class="offer__item">
-                <p class="offer__item--image">
-                  <img class="iphone__image" src="img/iphone-2-pink.png" width="186" height="382" alt="iphone">
-                </p>
-                <h3 class="offer__item--title">Меняет мир вокруг</h3>
-                <p class="offer__item--text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              </li>
-              <li class="offer__item">
-                <p class="offer__item--image">
-                  <img class="iphone__image smile" src="img/iphone-3-smile.png" width="186" height="382" alt="iphone">
-                </p>
-                <h3 class="offer__item--title">Заводит новых друзей</h3>
-                <p class="offer__item--text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-              </li>
-            </ul>
+      <section class="page-inside__photo-day">
+        <div class="photo-day__wrapper">
+          <p class="photo-day__preview">Взгляните на фотографии, которые выкладывают пользователи! <br> Видите, как не хватает ваших?</p>
+
+          <p class="photo-day__image--wrapper">
+            <img class="photo-day__image" src="" alt="">
+          </p>
+
+          <div class="photo-day__image--text">
+            <p class="photos__image--name">Анна <span>(5 минут назад)</span></p>
+            <p class="photos__image--comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="Нравится: 215"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-inside__photos">
+        <div class="photos__wrapper">
+          <ul class="photos__list">
             
-            <p class="offer__iphone-image">
-            <picture>
-              <source media="(min-width: 660px)" srcset="img/iphone-preview-tablet.png, img/iphone-preview-tablet@2.png 2x" sizes="100vw">
-                <img class="iphone-image" src="img/iphone-preview-mobile.png" alt="iphone" width="157" height="320">
-            </picture>              
-            </p>
-
-          </div>
-
-        </div>
-      </section>
-      
-      <section class="main-page__effect">
-        <div class="effect__wrapper">
-          <div class="effect__logo">
-            <p class="logo-1">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 298 345.1" style="enable-background:new 0 0 298 345.1;" xml:space="preserve">
-              <path d="M264.57,102.06l5.35-5.35c7.72-7.72,9.12-18.94,3.13-24.94c-6-6-17.22-4.59-24.93,3.13l-5.39,5.38
-              C221.77,63.29,196.11,51.88,168,48.3v-9.58h7.66c10.91,0,19.84-8.71,19.84-19.36S186.57,0,175.66,0h-53.32
-              c-10.91,0-19.84,8.71-19.84,19.36s8.93,19.36,19.84,19.36H130v9.58C56.68,57.63,0,120.24,0,196.1c0,82.29,66.71,149,149,149
-              c82.29,0,149-66.71,149-149C298,160.43,285.46,127.7,264.57,102.06z M149,306.26c-60.84,0-110.17-49.32-110.17-110.17
-              c0-60.84,49.32-110.17,110.17-110.17c60.84,0,110.17,49.32,110.17,110.17C259.17,256.94,209.84,306.26,149,306.26z"/>
-              </svg>
-            </p>
-
-            <p class="logo-2">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="22.5 69.05 253 253" style="enable-background:new 22.5 69.05 253 253;" xml:space="preserve">
-              <style type="text/css">
-              </style>
-              <path class="st0" d="M149,69.05c-69.86,0-126.5,56.64-126.5,126.5c0,69.86,56.64,126.5,126.5,126.5s126.5-56.64,126.5-126.5
-              C275.5,125.68,218.86,69.05,149,69.05z M149,306.26c-60.84,0-110.17-49.32-110.17-110.17c0-60.84,49.32-110.17,110.17-110.17
-              c60.84,0,110.17,49.32,110.17,110.17C259.17,256.94,209.84,306.26,149,306.26z"/>
-              </svg>
-            </p>
-
-            <span class="logo-number">24</span>
-         
-          </div>
-
-          <div class="effect__text-block">
-            <h2 class="effect__title">Эффект <br> на 24 часа!</h2>
-            <p class="effect__text">Британские ученые провели исследования и доказали, <br> что положительный эффект от использования приложения длится целые сутки!</p>
-            <a class="effect__link" target="_blank" href="https://www.sciencemag.org">Узнать больше об исследовании</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="main-page__review">
-        <div class="review__wrapper">
-          <p class="review__quote">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 78.67 63.79" style="enable-background:new 0 0 78.67 63.79;" xml:space="preserve">
-            <g>
-            <path d="M34.97,7.06L30.71,0C28.27,1.5,0,12.21,0,39.62c0,7.23,0.34,24.17,18.9,24.17c11.19,0,13.94-10.28,13.94-13.58
-              c0-21.98-21.38-14.18-21.38-14.18C11.46,17.96,31.26,9.18,34.97,7.06z"/>
-            </g>
-            <g>
-            <path d="M78.67,7.06L74.42,0c-2.44,1.5-30.71,12.21-30.71,39.62c0,7.23,0.34,24.17,18.9,24.17c11.19,0,13.94-10.28,13.94-13.58
-              c0-21.98-21.38-14.18-21.38-14.18C55.17,17.96,74.97,9.18,78.67,7.06z"/>
-            </g>
-            </svg>
-          </p>
-
-          <div class="review__text">
-            <button class="review__text--check back">Назад</button>
-            <p class="review__text--text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
-            <button class="review__text--check forward">Вперед</button>
-          </div>
+            <li class="photos__item">
+              <p class="photo-day__image--wrapper">
+                <img class="photo-day__image" src="" alt="">
+              </p>
+        
+              <div class="photo-day__image--text">
+                <p class="photos__image--name">Анна <span>(5 минут назад)</span></p>
+                <p class="photos__image--comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <p class="Нравится: 215"></p>
+              </div>
+            </li>
 
 
-          <div class="review__author">
-            <h3 class="review__author--name">Николай Петров</h3>
-            <p class="review__author--data">25 лет, водитель трамвая</p>
-          </div>
+          </ul>
 
-          <form action="" class="review__check form__slider">
-            <ul class="review__check--list form__slider--list">
-              <li class="review__checkitem form__slider--item current">
-                <input id="review-1" type="radio" name="rev" value="rev-1" checked><label for="review-1"></label>
-              </li>
-              <li class="review__checkitem form__slider--item">
-                <input id="review-2" type="radio" name="rev" value="rev-2"><label for="review-2"></label>
-              </li>
-              <li class="review__checkitem form__slider--item">
-                <input id="review-3" type="radio" name="rev" value="rev-3"><label for="review-3"></label>
-              </li>
-            </ul>
-          </form>
 
         </div>
       </section>
 
-      <section class="main-page__price">
-        <div class="price__wrapper">
-          <table class="price__table">
-            <thead class="price__thead">
-              <tr class="price_thead--row">
-                <td class="price_thead--data empty-cell">Название</td>
-                <td class="price_thead--data base">
-                  <h4 class="price_thead--title ">База</h4>
-                  <p class="price_thead--cost">1,99 USD</p>
-                </td>
-                <td class="price_thead--data standart hit current">
-                  <h4 class="price_thead--title">Стандарт</h4>
-                  <p class="price_thead--cost">3,99 USD</p>
-                </td>
-                <td class="price_thead--data unlim">
-                  <h4 class="price_thead--title">Анлим</h4>
-                  <p class="price_thead--cost">9,99 USD</p>
-                </td>
-              </tr>
-            </thead>
-            <tbody class="price_tbody">
-              <tr class="price_tbody--row">
-                <td class="price_tbody--data name">Розовый фильтр</td>
-                <td class="price_tbody--data checking"><span class="yes">+</span></td>
-                <td class="price_tbody--data checking current name-base"><span class="yes">+</span></td>
-                <td class="price_tbody--data checking"><span class="yes">+</span></td>
-              </tr>
-
-              <tr class="price_tbody--row">
-                <td class="price_tbody--data name">Смайлики</td>
-                <td class="price_tbody--data checking"><span class="no">-</span></td>
-                <td class="price_tbody--data checking current name-standart"><span class="yes">+</span></td>
-                <td class="price_tbody--data checking"><span class="yes">+</span></td>
-              </tr>
-              
-              <tr class="price_tbody--row">
-                <td class="price_tbody--data name">Комментарии</td>
-                <td class="price_tbody--data checking"><span class="no">-</span></td>
-                <td class="price_tbody--data checking current name-unlim"><span class="no">-</span></td>
-                <td class="price_tbody--data checking"><span class="yes">+</span></td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <form action="" class="table__check form__slider">
-            <ul class="table__check--list form__slider--list">
-              <li class="table__checkitem form__slider--item">
-                <input id="table-1" type="radio" name="table" value="table-1"><label for="table-1"></label>
-              </li>
-              <li class="table__checkitem form__slider--item current">
-                <input id="table-2" type="radio" name="table" value="table-2" checked><label for="table-2"></label>
-              </li>
-              <li class="table__checkitem form__slider--item">
-                <input id="table-3" type="radio" name="table" value="table-3"><label for="table-3"></label>
-              </li>
-            </ul>
-          </form>
-
-        </div>
-      </section>
-
-      <section class="main-page__contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Остались вопросы? <br> Свяжитесь с нами!</h2>
-          <div class="contacts__info">
-            <p class="contacts__info--text">Звоните: <br>
-            <span class="contacts__info--phone">+7 (812) 555-66-66</span>
-            </p>
-
-            <p class="contacts__info--text">Пишите: <br>
-            <a  class="contacts__info--link" href="mailto:mail@htmlacademy.ru"><span  class="contacts__info--link-text">mail@htmlacademy.ru</span></a>
-            </p>
-      
-            <p class="contacts__info--text">Приезжайте в гости: <br>
-            <span class="contacts__info--address">ул. Большая <br>
-               Конюшенная, 19/8</span>
-            </p>
-          </div>
-        </div>
-        <div class="map__wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.32085871614348!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1570915437379!5m2!1sru!2sby" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
-        </div>
-
-      </section>
 
     </main>
 
