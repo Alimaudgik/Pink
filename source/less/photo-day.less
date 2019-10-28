@@ -1,0 +1,166 @@
+@dashed: 1px dashed red;
+@darkblue: #283645;
+@lightblue: #1d2631;
+@pink: #d22856;
+@lightgrey: #f2f2f2;
+
+
+.page-inside__photo-day {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  background-color: #ffffff;
+  color: @darkblue;
+
+} 
+
+.photo-day__wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.photo-day__preview {
+  margin: 0;
+  padding: 50px 0;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.photo-day__image--wrapper {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  width: 320px;
+  height: 137px;
+
+  &::before {
+    content: 'Паноромма дня';
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    padding: 13px 20px 14px;
+
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: @pink;
+  } 
+}
+
+.photo-day__image--text {
+  margin: 0 20px;
+  padding: 25px 15px;
+
+  font-size: 14px;
+
+  background-color: @lightgrey;
+
+  & * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.photos__image--name {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+
+  & span {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}
+
+.photos__image--comment {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.photos__image--like {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: @pink;
+
+  & .like {
+    display: inline-block;
+
+    margin-right: 20px;
+    width: 13px;
+    height: 12px;
+  }
+  & .like svg {
+    fill: @pink;
+  }
+
+
+}
+
+
+
+@media(min-width: 660px) {
+  
+  .page-inside__photo-day {
+    margin-bottom: 50px;
+  }
+
+  .photo-day__preview {
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 80px;
+
+    font-size: 18px;
+
+    width: 450px;
+
+    & br {
+      display: none;
+    }
+  }
+  
+
+  .photo-day__image--wrapper {
+    width: 660px;
+    height: 509px;
+
+    overflow: hidden;
+  
+    &::before {
+      top: 55px;
+    }
+  }
+}
+
+
+
+@media(min-width: 1200px) {
+  .photo-day__preview {
+    width: 580px;
+  }
+
+  .photo-day__image--wrapper::before {
+    right: 130px
+  }
+
+  .photo-day__image--wrapper {
+    width: 1200px;
+    height: 506px;
+ 
+    &::before {
+      right: 130px;
+    }
+  }
+}
