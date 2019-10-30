@@ -121,7 +121,7 @@
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="photos.html">Фотографии</a>
+              <a class="main-nav__link current" href="photos.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="contest.html">Конкурс</a>
@@ -362,7 +362,7 @@
 
       <section class="page-inside__filter">
         <div class="filter__wrapper">
-          <h3 class="filter__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h3>
+          <h3 class="filter__title">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</h3>
           <div class="filter__image--editor">
             <p class="filter__image--wrapper">
               <picture>
@@ -372,10 +372,10 @@
               </picture>
             </p>
             <div>
-              <form action="">
-                <ul>
-                  <li>
-                    <label for="crop">
+              <form class="filter__form" action="">
+                <ul class="filter__list">
+                  <li class="list__item">
+                    <label class="crop" for="crop">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
                       <style type="text/css">
@@ -388,8 +388,8 @@
                     <input type="range" id="crop">
                   </li>
 
-                  <li>
-                    <label for="color">
+                  <li class="list__item">
+                    <label class="color" for="color">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
                       <style type="text/css">
@@ -405,10 +405,8 @@
                     <input type="range" id="color">
                   </li>
 
-                    
-
-                  <li>
-                    <label for="contr"></label>
+                  <li class="list__item">
+                    <label class="contr" for="contr"></label>
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
                         <style type="text/css">
@@ -424,9 +422,10 @@
                     <input type="range" id="contr">
                   </li>
                 </ul>
-
-                <button class="filter__button button" type="button">Запостить</button>
-                <button class="filter__button button" type="reset">Отмена</button>
+                <div class="button__wrapper">
+                  <button class="filter__button post-button" type="button">Запостить</button>
+                  <button class="filter__button reset-button" type="reset">Отмена</button>
+                </div>
               </form>
 
             </div>
