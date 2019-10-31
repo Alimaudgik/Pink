@@ -46,11 +46,6 @@
   }
 }
 
-.filter__form {
-  margin: 0;
-  padding: 0;
-}
-
 .filter__list {
   position: relative;
   display: flex;
@@ -136,12 +131,42 @@
   width: 240px;
 }
 
-/*
 
+.filter__form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 
+  margin: 0;
+  padding: 0;
 
+  height: 100%;
 
-*/
+  border: 1px dashed green;
+}
+
+.button__wrapper {
+  border: @dashed;
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin: 0;
+  padding: 40px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -20px;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #dddfe0;
+  }
+}
 
 
 
@@ -182,14 +207,39 @@
 
     margin: 0;
     padding: 0;
-    margin-bottom: 65px;
 
     width: 275px;
   }
 
   .filter__item {
-    width: 24px;
-    height: 24px;
+    position: relative;
+
+    padding: 27px 0 23px;
+    
+    width: 100%;
+    height: auto;
+
+    border-bottom: 1px solid #dddfe0;
+    
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    & label {
+      margin-left: 3px;
+
+      width: 24px;
+      height: 24px;
+    }
+
+    & label + input {
+      display: inline-block;
+
+      left: 55px;
+      bottom: 35px;
+
+      width: 200px;
+    }
 
     & svg {
       fill: @pink;
@@ -197,13 +247,49 @@
     }
   }
 
+  .crop svg {
+    margin: 0 1px;
+    
+    width: 24px;
+    height: 22px;
+  }
+  
+  .color svg {
+    margin: 1px;
+    
+    width: 22px;
+    height: 22px;
+  }
+  
+  .contr svg {
+    margin: 4px;
+    
+    width: 16px;
+    height: 16px;
+  }
+
+  .current-filter:hover svg {
+    opacity: 0.6;  
+  }
+
+  .filter__range {
+    justify-content: space-between;
+  }
+
+  .button__wrapper {
+    padding: 0;
+    margin-top: auto;
+    &::before {
+      display: none;
+    }
+  }
 }
 
 
 
 @media(min-width: 1200px) {
   .page-inside__filter {
-    padding: 0 130px;
+    padding: 0;
   }
 
   .filter__title {
@@ -216,5 +302,56 @@
     padding: 55px 80px;
   }
 
+  .filter__list {
+    width: 410px;
+  }
+
+  .filter__item {
+    padding: 15px 0;
+
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    & label {
+      margin: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    & label + input {
+      left: 90px;
+
+      width: 290px;
+    }
+  }
+  
+  .crop svg {
+    margin: 3px 3px;
+    
+    width: 44px;
+    height: 44px;
+  }
+
+  .color svg {
+    margin: 4px 1px 3px;
+    
+    width: 48px;
+    height: 43px;
+  }
+
+  .contr svg {
+    margin: 9px 9px;
+    
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .button__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
 }
