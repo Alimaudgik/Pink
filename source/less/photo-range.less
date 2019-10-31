@@ -52,6 +52,7 @@
 }
 
 .filter__list {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -59,42 +60,92 @@
   width: 240px;
 
   margin: 0 auto;
-  padding: 40px 0 25px;
+  padding: 40px 0 70px;
   
   border: @dashed;
 }
 
-.list__item {
+.filter__item {
+  margin: 0;
+  padding: 0;
   width: 50px;
   height: 50px;
 
-  border: @dashed;
+  border: @dashed; 
+
+  & label {
+
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    border: @dashed;
+  }
+
+  & svg {
+    opacity: 0.3;
+  }
+
+  & label + input {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+
+    display: none;
+  }
+
+  &:hover svg {
+    opacity: 0.6;
+  }
 }
 
-.list__item .crop {
+.crop svg {
+  margin: 3px 3px;
+  
   width: 44px;
   height: 44px;
 }
 
-.list__item .color {
+.color svg {
+  margin: 4px 1px 3px;
+  
   width: 48px;
   height: 43px;
 }
 
-.list__item .contr {
+.contr svg {
+  margin: 9px 9px;
+  
   width: 32px;
   height: 32px;
 }
 
-.list__item label {
-  display: ibline-block;
 
-  & svg {
-    margin: auto auto;
-    background-color: transparent;
+.current-filter {
+  & svg,
+  &:hover svg {
+    fill: @pink;
+    opacity: 1;
   }
-
 }
+
+.current-filter label + input {
+  display: inline-block;
+  margin-top: 20px;
+
+  width: 240px;
+}
+
+/*
+
+
+
+
+*/
+
+
+
+
 
 
 
@@ -108,17 +159,41 @@
 
   .filter__image--editor {
     flex-direction: row;
+    justify-content: space-between;
 
     padding: 50px 20px;
   }
 
   .filter__image--wrapper {
+    margin-right: 45px;
+
     width: 300px;
     height: 400px;
   
     & img {
       width: 300px;
       height: 400px;
+    }
+  }
+
+  .filter__list {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 65px;
+
+    width: 275px;
+  }
+
+  .filter__item {
+    width: 24px;
+    height: 24px;
+
+    & svg {
+      fill: @pink;
+      opacity: 1;
     }
   }
 

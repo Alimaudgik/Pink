@@ -1,0 +1,92 @@
+@dashed: 1px dashed red;
+@darkblue: #283645;
+@lightblue: #1d2631;
+@pink: #d22856;
+@lightgrey: #f2f2f2;
+
+
+
+
+/*слайдер*/
+
+	
+input[type=range] {
+  -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+  /*width: 100%;  Указание параметра ширины требуется для Firefox. */
+}
+ 
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+ 
+input[type=range]:focus {
+  outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+ 
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Специальные правила для браузеров на движках WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid @pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  cursor: pointer;
+  margin-top: -7px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: @pink;
+}
+
+/* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 2px solid @pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+/* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+  border: 2px solid @pink;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%px;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+
+/*Полоса диапазона*/
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2px;
+  cursor: pointer;
+  background: @darkblue;
+}
+
+
+
+
+
+@media(min-width: 660px) {
+
+
+}
+
+
+
+@media(min-width: 1200px) {
+
+
+}
