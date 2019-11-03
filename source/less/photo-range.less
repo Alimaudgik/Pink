@@ -56,8 +56,6 @@
 
   margin: 0 auto;
   padding: 40px 0 70px;
-  
-  border: @dashed;
 }
 
 .filter__item {
@@ -66,15 +64,11 @@
   width: 50px;
   height: 50px;
 
-  border: @dashed; 
-
   & label {
 
     display: block;
     width: 50px;
     height: 50px;
-
-    border: @dashed;
   }
 
   & svg {
@@ -141,12 +135,9 @@
   padding: 0;
 
   height: 100%;
-
-  border: 1px dashed green;
 }
 
 .button__wrapper {
-  border: @dashed;
   position: relative;
 
   display: flex;
@@ -210,14 +201,13 @@
   opacity: 0.1;
 
   &:hover {
-    background-color: @pink;
-    color: #ffffff;
+    opacity: 0.3;
     outline: none;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
-    outline: none;
+    color: #ffffff;
+    background-color: @darkblue;
   }
 }
 
