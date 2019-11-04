@@ -1,0 +1,139 @@
+@dashed: 1px dashed red;
+@darkblue: #283645;
+@lightblue: #1d2631;
+@pink: #d22856;
+@lightgrey: #f2f2f2;
+
+
+
+.contest__form {
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.contest__wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+
+.contest__title {
+  margin: 0 auto;
+  padding: 45px 20px 25px;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: @darkblue;
+  
+  border: @dashed;
+}
+
+.contest__form-block {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  & fieldset {
+    border: none;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  & .contest__user-name {
+    padding-top: 0;
+  }
+
+  & label {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: @pink;
+  }
+
+  & input {
+    margin-bottom: 20px;
+    height: 55px;
+    width: 100%;
+
+    font-size: 18px;
+    color: @darkblue;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    box-sizing: border-box;
+    
+    & last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      border-color: @darkblue;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: @pink;
+    }
+  }
+
+  & input[type=text] {
+    padding-left: 22px;
+  }
+
+  & input::placeholder {
+    color: @darkblue;
+  }
+}
+
+
+
+
+
+
+
+@media(min-width: 660px) {
+  .conttest__wrapper {
+    padding: 0 20px;
+  }
+
+  .contest__title {
+    padding: 90px 20px 70px;
+  
+    font-size: 18px;
+    line-height: 30px;
+
+    width: 500px;
+  }
+}
+
+
+
+@media(min-width: 1200px) {
+  .conttest__wrapper {
+    margin: 0;
+    padding: 0 130px;
+  }
+
+  .contest__title {
+    padding: 90px 130px 70px;
+    
+    width: 800px;
+  }
+
+  .contest__form-block {
+    flex-flow: row wrap;
+  }
+
+}
