@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font">
-    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font">
+    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font">
+    <link rel="preload" href="fonts/OpenSans-Light.woff" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="contest-page">
@@ -148,83 +149,96 @@
           <h3 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже</h3>
     
           <form action="" class="contest__form-block">
-            <fieldset class="contest__user-name">
-              <ul class="user-name__list">
-                <li class="user-name__item">
-                  <label for="surname">Фамилия:</label>
-                  <input id="surname" type="text" placeholder="Укажите фамилию*">
-                </li>
-                <li class="user-name__item">
-                  <label for="name">Имя:</label>
-                  <input id="name" type="text" placeholder="Укажите ваше имя*">
-                </li>
-                <li class="user-name__item">
-                  <label for="secname">Отчество:</label>
-                  <input id="secname" type="text" placeholder="Ну и отчество тоже">
-                </li>
-              </ul>
-            </fieldset>
 
-            <fieldset class="contest__profit">
-              <legend class="profit__title fieldset-title">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="profit__list">
-                <li class="profit__item">
-                  <input id="shark" type="checkbox" name="profit" value="shark" checked><label for="shark">Сделать селфи с акулой</label>
-                </li>
-                <li class="profit__item">
-                  <input id="burn" type="checkbox" name="profit" value="burn" checked><label for="burn">Обгорел на пляже</label>
-                </li>
-                <li class="profit__item">
-                  <input id="chuck" type="checkbox" name="profit" value="chuck"><label for="chuck">Видел Чака Норриса</label>
-                </li>
-                <li class="profit__item">
-                  <input id="present" type="checkbox" name="profit" value="present"><label for="present">Накупил сувениров</label>
-                </li>
-                <li class="profit__item">
-                  <input id="tower" type="checkbox" name="profit" value="tower" checked><label for="tower">Удержал башню</label>
-                </li>
-                <li class="profit__item">
-                  <input id="hotel" type="checkbox" name="profit" value="hotel"><label for="hotel">Разгромил отель</label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="contest__user-name">
+              <fieldset class="user-name__block">
+                <ul class="user-name__list">
+                  <li class="user-name__item">
+                    <label for="surname">Фамилия:</label>
+                    <input id="surname" type="text" placeholder="Укажите фамилию*">
+                  </li>
+                  <li class="user-name__item">
+                    <label for="name">Имя:</label>
+                    <input id="name" type="text" placeholder="Укажите ваше имя*">
+                  </li>
+                  <li class="user-name__item">
+                    <label for="secname">Отчество:</label>
+                    <input id="secname" type="text" placeholder="Ну и отчество тоже">
+                  </li>
+                </ul>
+              </fieldset>              
+            </div>
 
-            <fieldset class="contest__contact">
-              <legend class="contact__title fieldset-title">Контактная информация</legend>
-              <ul class="contact__list">
-                <li class="contact__item">
-                  <label for="phone-number">Номер телефона</label><br>
-                  <input id="phone-number" type="text" placeholder="Номер пожалуйста*">
-                </li>
-                <li class="contact__list">
-                  <label for="name">Адрес почты</label><br>
-                  <input id="name" type="text" placeholder="Введите почту*">
-                </li>
-              </ul>
-            </fieldset>
+            <div class="contest__profit">
+              <fieldset class="profit__block">
+                <legend class="profit__title fieldset-title">Ваши безбашенные достижения в путешествии</legend>
+                <ul class="profit__list">
+                  <li class="profit__item">
+                    <input id="shark" type="checkbox" name="profit" value="shark" checked><label for="shark">Сделать селфи с акулой</label>
+                  </li>
+                  <li class="profit__item">
+                    <input id="burn" type="checkbox" name="profit" value="burn" checked><label for="burn">Обгорел на пляже</label>
+                  </li>
+                  <li class="profit__item">
+                    <input id="chuck" type="checkbox" name="profit" value="chuck"><label for="chuck">Видел Чака Норриса</label>
+                  </li>
+                  <li class="profit__item">
+                    <input id="present" type="checkbox" name="profit" value="present"><label for="present">Накупил сувениров</label>
+                  </li>
+                  <li class="profit__item">
+                    <input id="tower" type="checkbox" name="profit" value="tower" checked><label for="tower">Удержал башню</label>
+                  </li>
+                  <li class="profit__item">
+                    <input id="hotel" type="checkbox" name="profit" value="hotel"><label for="hotel">Разгромил отель</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
-            <fieldset class="contest__soft">
-              <legend class="soft__title">С каким приложением путешествовали?</legend>              <ul class="soft__list">
-                <li class="soft__item">
-                  <input id="android" type="radio" name="profit" value="android" checked><label for="android">Pink для Android</label>
-                </li>
-                <li class="soft__item">
-                  <input id="ios" type="radio" name="profit" value="ios"><label for="ios">Pink для iOS</label>
-                </li>
-                <li class="soft__item">
-                  <input id="win" type="radio" name="profit" value="win"><label for="win">Windows Phone</label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="contest__comments">
-              <legend class="comments__title">Опишите свои эмоции</legend>
-              <textarea name="" id="comments" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="contest__contact">
+              <fieldset class="contact__block">
+                <legend class="contact__title fieldset-title">Контактная информация</legend>
+                <ul class="contact__list">
+                  <li class="contact__item">
+                    <label for="phone-number">Номер телефона</label><br>
+                    <input id="phone-number" type="text" placeholder="Номер пожалуйста*">
+                  </li>
+                  <li class="contact__list">
+                    <label for="name">Адрес почты</label><br>
+                    <input id="name" type="text" placeholder="Введите почту*">
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
 
-            </fieldset>
+            <div class="contest__soft">
+              <fieldset class="soft__block">
+                <legend class="soft__title fieldset-title">С каким приложением путешествовали?</legend>
+                <ul class="soft__list">
+                  <li class="soft__item">
+                    <input id="android" type="radio" name="profit" value="android" checked><label for="android">Pink для Android</label>
+                  </li>
+                  <li class="soft__item">
+                    <input id="ios" type="radio" name="profit" value="ios"><label for="ios">Pink для iOS</label>
+                  </li>
+                  <li class="soft__item">
+                    <input id="win" type="radio" name="profit" value="win"><label for="win">Windows Phone</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
-            <div>
+
+            <div class="contest__comments">
+              <fieldset class="comments__block">
+                <legend class="comments__title fieldset-title">Опишите свои эмоции</legend>
+                <textarea name="" id="comments" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </fieldset>
+            </div>
+
+
+            <div class="contest__submit">
               <button type="submit">Отправить форму</button>
               <p><span>*</span> - обязательные поля</p>
             </div>
