@@ -45,6 +45,11 @@
     padding: 40px 20px;
   }
 
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
+
   & fieldset {
     border: none;
     margin: 0;
@@ -210,6 +215,41 @@
   transform: rotate(-45deg);
 }
 
+.contact__title {
+  display: none;
+}
+
+.contact__item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin-bottom: 25px;
+
+  border: @dashed;
+
+  & #phone-number {
+    height: 60px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  & .contact__label {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    border: @dashed;
+  }
+}
+
+
+
+
+
+
 
 @media(min-width: 660px) {
   .contest__title {
@@ -240,8 +280,8 @@
     }
 
     & fieldset {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 55px;
+      padding-right: 55px;
 
       border: 2px solid #e5e5e5;
     }
@@ -278,6 +318,22 @@
     line-height: 30px;
   }
 
+  .profit__item label {
+    padding: 0;
+    padding-left: 60px;
+
+    font-size: 18px;
+    border: none;
+  }
+
+  .contact__title {
+    display: inline-block; 
+  }
+
+  .contact__item {
+    background: pink;
+  }
+
 }
 
 
@@ -307,6 +363,34 @@
       border: @dashed;
     }
   }
+
+  .contest__profit {
+    width: 100%;
+  }
+
+  .contest__profit .profit__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+
+    flex-flow: column wrap;
+    justify-content: space-between;
+
+    height: 160px;
+
+    & .profit__item {
+      margin: 0;
+      margin-bottom: 40px;
+      width: 270px;
+      border: none;
+      
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+
 
 
 
