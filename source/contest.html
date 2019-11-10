@@ -200,12 +200,12 @@
                 <legend class="contact__title fieldset-title">Контактная информация</legend>
                 <ul class="contact__list">
                   <li class="contact__item">
-                    <label class="contact__label" for="phone-number">Номер телефона</label><br>
-                    <input id="phone-number" type="text" placeholder="Номер пожалуйста*">
+                    <p class="contact__name">Номер телефона</p>
+                    <label for="phone-number"><input id="phone-number" type="text" placeholder="Номер пожалуйста*"></label>
                   </li>
                   <li class="contact__item">
-                    <label class="contact__label" for="name">Адрес почты</label><br>
-                    <input id="name" type="text" placeholder="Введите почту*">
+                    <p class="contact__name">Адрес почты</p>
+                    <label for="name"><input id="name" type="text" placeholder="Введите почту*"></label>
                   </li>
                 </ul>
               </fieldset>
@@ -217,13 +217,16 @@
                 <legend class="soft__title fieldset-title">С каким приложением путешествовали?</legend>
                 <ul class="soft__list">
                   <li class="soft__item">
-                    <input class="contact__input" id="android" type="radio" name="profit" value="android" checked><label for="android">Pink для Android</label>
+                    <input class="contact__input" id="android" type="radio" name="profit" value="android" checked>
+                    <label for="android">Pink для Android</label>
                   </li>
                   <li class="soft__item">
-                    <input id="ios" type="radio" name="profit" value="ios"><label for="ios">Pink для iOS</label>
+                    <input id="ios" type="radio" name="profit" value="ios">
+                    <label for="ios">Pink для iOS</label>
                   </li>
                   <li class="soft__item">
-                    <input id="win" type="radio" name="profit" value="win"><label for="win">Windows Phone</label>
+                    <input id="win" type="radio" name="profit" value="win">
+                    <label for="win">Windows Phone</label>
                   </li>
                 </ul>
               </fieldset>
@@ -233,7 +236,7 @@
             <div class="contest__comments">
               <fieldset class="comments__block">
                 <legend class="comments__title fieldset-title">Опишите свои эмоции</legend>
-                <textarea name="" id="comments" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <textarea class="comments__textarea" name="" id="comments" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
 

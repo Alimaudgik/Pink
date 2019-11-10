@@ -215,6 +215,19 @@
   transform: rotate(-45deg);
 }
 
+input[type=checkbox]:hover + label::before,
+input[type=radio]:hover + label::before {
+  border-color: @darkblue;
+}
+
+input[type=checkbox]:active + label::before,
+input[type=radio]:active + label::before {
+  border-color: @pink;
+}
+
+
+
+
 .contact__title {
   display: none;
 }
@@ -222,31 +235,143 @@
 .contact__item {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
   margin-bottom: 25px;
 
   border: @dashed;
 
-  & #phone-number {
-    height: 60px;
+  & label {
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
 
   &:last-child {
     margin: 0;
   }
 
-  & .contact__label {
-    display: inline-block;
-
+  & .contact__name {
     margin: 0;
     padding: 0;
+    margin-bottom: 15px;
     padding-left: 25px;
     border: @dashed;
+
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: @pink;
   }
 }
 
 
+/*contest__soft*/
 
+  .soft__list {
+    margin: 0;
+    padding: 0;
+
+    & input {
+      display: none;
+    }
+  }
+
+  .soft__item {
+    border: @dashed;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    & label {
+      position: relative;
+
+      margin: 0;
+      padding: 0;
+      padding-left: 70px;
+
+      font-size: 18px;
+      line-height: 40px;
+      text-transform: initial;
+      color: @darkblue;
+
+      border: @dashed;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 36px;
+        height: 36px;
+
+        border: 2px solid #e5e5e5;
+        border-radius: 50%;
+
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .soft__item input:checked + label::after {
+    /*background-image: radial-gradient(circle, @pink 0, @pink 8px, #ffffff 8px)*/
+
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background-color: @pink;
+  }
+
+
+  /*contest__comments*/
+
+  .contest__comments {
+    border: @dashed;
+  }
+
+  .comments__title {
+    margin-bottom: 20px;
+  }
+
+  .comments__textarea {
+    padding: 15px 20px;
+    width: 100%;
+    height: 197px;
+    resize: none;
+
+    font-family: "OpenSans", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: @darkblue;
+    outline: none;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 30px;
+      color: @darkblue;
+    }
+
+    &:hover {
+      border-color: @darkblue;
+    }
+
+    &:active,
+    &:focus {
+      border-color: @pink;
+    }
+  }
 
 
 
@@ -290,14 +415,16 @@
       margin: 0;
       padding: 0;
       padding-right: 20px;
+    }
 
+    .contact__item label {
+      padding-right: 0;
     }
   }
 
   .contest__user-name fieldset {
     padding: 0;
     border: none;
-    order: 1;
 
     & label {
       line-height: 59px;
@@ -331,7 +458,118 @@
   }
 
   .contact__item {
-    background: pink;
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    & label {
+      margin-bottom: 20px;
+
+      & input {
+        width: 100%;
+        padding-left: 25px;
+      }
+    }
+
+    & .contact__name {
+      margin: 0;
+    }
+  }
+  
+
+  .contact__item label::after {
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 2px;
+
+    width: 58px;
+    height: calc(100% - 4px);
+
+    background-color: @lightgrey;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .contact__item:first-child label::after {
+    background-image: url('../img/logo-phone.png');
+    background-size: 20px 19px;
+  }
+
+  .contact__item:last-child label::after {
+    background-image: url('../img/logo-mail.png');
+    background-size: 18px 13px;
+  }
+
+
+/*contest__soft*/
+
+  .contest__soft .soft__block {
+    padding: 0;
+    padding-bottom: 55px;
+
+    & .soft__title {
+      line-height: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .soft__item label {
+    padding-left: 120px;
+
+    &::before {
+      left: 60px;
+    }
+  }
+
+  .soft__item input:checked + label::after {
+    left: 72px;
+  }
+
+
+  /*порядок блоков*/
+
+  .contest__user-name {
+    order: 1;
+  }
+
+  .contest__profit {
+    order: 4;
+  }
+
+  .contest__contact {
+    order: 3;
+  }
+
+  .contest__soft {
+   order: 2;
+  }
+
+  .contest__comments {
+    order: 5;
+  }
+
+  .contest__submit {
+    order: 6;
+  }
+
+
+  /*contest__comments*/
+
+  .contest__comments .comments__block {
+    padding-bottom: 50px;
+  }
+  
+  .comments__title {
+    margin-bottom: 35px;
+  }
+  
+  .comments__textarea {
+    height: 189px;
   }
 
 }
@@ -358,9 +596,23 @@
     }
 
     & .contest__user-name {
+      padding-top: 10px;
       width: 435px;
 
       border: @dashed;
+    }
+  }
+
+  .user-name__list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    
+    border: @dashed;
+    height: 100%;
+
+    & user-name__item {
+      margin: 0;
     }
   }
 
@@ -391,6 +643,86 @@
   }
 
 
+  /*contest__contact*/
+
+  .contest__contact {
+    width: 100%;
+  }
+
+  .contact__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .contact__item {
+    width: 371px;
+
+    margin: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    & .contact__name {
+      margin-bottom: 25px;
+    }
+  }
+
+
+  /*contest__soft*/
+  
+  .contest__soft {
+    width: 430px;
+  }
+
+  .contest__soft .soft__block {
+    padding: 0;
+  }
+
+  .soft__item {
+    margin-bottom: 35px;
+  }
+
+  .soft__item label {
+    padding-left: 135px;
+
+    &::before {
+      left: 75px;
+    }
+  }
+
+  .soft__item input:checked + label::after {
+    left: 87px;
+  }
+
+
+  .contest__soft,
+  .contest__user-name {
+    min-height: 250px;
+  }
+
+
+  /*contest__comments*/
+
+  .contest__comments {
+    width: 100%;
+  }
+
+  .contest__comments .comments__block {
+    padding-bottom: 45px;
+  }
+  
+  .comments__textarea {
+    height: 124px;
+  }
+
+
+
+
+
+
+
 
 
 
@@ -414,25 +746,7 @@
 
 
 
-  .contest__profit {
-    order: 4;
-  }
 
-  .contest__contact {
-    order: 3;
-  }
-
-  .contest__soft {
-   order: 2;
-  }
-
-  .contest__comments {
-    order: 5;
-  }
-
-  .contest__submit {
-    order: 6;
-  }
 
   
 
