@@ -2,13 +2,36 @@
 @lightgrey: #f2f2f2;
 @darkblue: #283645;
 
+@keyframes popup {
+  0%    {bottom: 3000px;}
+  50%   {bottom: -100px;}
+  70%   {bottom: 100px;}
+  90%   {bottom: 0;}
+  100%  {bottom: 50px;}
+}
 
 .popup__fail,
 .popup__reg {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+
   margin: 0;
   padding: 0;
   border-radius: 4px;
   background-color: #ffffff;
+  box-shadow: 7px 0 15px 0 rgba(0, 0, 0, 0.15);
+
+  animation: popup 2s ease-in-out infinite;
+  animation-iteration-count: 1;
+}
+
+.popup__reg {
+  display: ;
+}
+
+.popup__fail {
+  display: none;
 }
 
 .fail__title,
@@ -84,6 +107,14 @@
   }
 }
 
+.close-popup {
+  display: none;
+}
+
+.open-popup {
+  display: block;
+}
+
 
 
 
@@ -91,6 +122,9 @@
 
   .popup__fail,
   .popup__reg {
+
+    left: calc(50% - 230px);
+
     margin: 5px auto;
 
     width: 460px;
@@ -133,6 +167,7 @@
 
   .popup__fail,
   .popup__reg {
+    left: calc(50% - 390px);
     width: 780px;
   }
 
